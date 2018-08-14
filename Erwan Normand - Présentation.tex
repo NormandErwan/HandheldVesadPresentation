@@ -12,16 +12,59 @@
 \usepackage[T1]{fontenc}
 
 \title[Agrandissement d'un écran mobile par RA]{Agrandissement d'un écran mobile par réalité augmentée}
-\author{Erwan Normand}
+\author{Erwan Normand \\ \texttt{normand.erwan@protonmail.com}}
 \institute{École de Technologie Supérieure}
 \date{\frenchdate{2018}{08}{29}}
+
+\AtBeginSubsection[] {
+  \begin{frame}<beamer>{Plan de la soutenance}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
 
 \begin{document}
 
 \maketitle
 
-\begin{frame}{Lignes directrices}
+\begin{frame}{Plan de la soutenance}
   \tableofcontents
+\end{frame}
+
+
+\section{Problème de recherche}
+\subsection{Problématique} % Chapitre d'introduction
+
+\subsection{Travaux reliés} % Chapitre de revue de littérature
+
+
+\section{Contributions}
+\subsection{Concept} % Chapitre du concept
+
+\subsection{Prototype} % Chapitre du visiocasque
+
+\subsection{Étude expérimentale} % Chapitre étude expérimentale
+
+
+\section{Discussion} % Chapitre discussion
+
+
+\section*{Conclusion}
+\begin{frame}{Conclusion}
+  \begin{itemize}
+    \item Le \alert{premier message principal} de l'exposé en une ligne ou deux.
+    \item Le \alert{deuxième message principal} de l'exposé en une ligne ou deux.
+    \item Peut-être un \alert{troisième message}, mais pas plus que ça.
+  \end{itemize}
+\end{frame}
+
+
+\appendix
+\section<presentation>*{\appendixname}
+\subsection<presentation>*{Bibliographie}
+
+\begin{frame}[allowframebreaks]{Bibliographie}
+  \begin{thebibliography}{10}
+  \end{thebibliography}
 \end{frame}
 
 \end{document}
