@@ -1,26 +1,24 @@
-\documentclass{beamer}
-
 % Largement inspiré par l'excellent exemple français de présentation de Till Tantau (2004) et Philippe de Sousa (2006) : https://github.com/josephwright/beamer/blob/master/doc/solutions/conference-talks/conference-ornate-20min.fr.tex
 
-\mode<presentation> {
-  \usetheme{Warsaw}
-}
+\documentclass{beamer}
 
 \usepackage{lmodern}
 \usepackage[french]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\title[Agrandissement d'un écran mobile par RA]{Agrandissement d'un écran mobile par réalité augmentée}
-\author{Erwan Normand \\ \texttt{normand.erwan@protonmail.com}}
-\institute{École de Technologie Supérieure}
-\date{\frenchdate{2018}{08}{29}}
-
-\AtBeginSubsection[] {
-  \begin{frame}<beamer>{Plan de la soutenance}
-    \tableofcontents[currentsection,currentsubsection]
-  \end{frame}
+\mode<presentation> {
+  \usetheme{default}
+  \useinnertheme{circles}
+  \useoutertheme[subsections=false]{smoothbars}
+  \usecolortheme[rgb={0.9,0,0}]{structure}
 }
+
+\title[Agrandissement d'un écran mobile par RA]{Agrandissement d'un écran mobile par réalité augmentée}
+\author[Erwan Normand]{Erwan Normand}% \\ \small{\texttt{normand.erwan@protonmail.com}}}
+%\institute{École de Technologie Supérieure}
+\institute{Soutenance de mémoire de maîtrise}
+\date{\frenchdate{2018}{08}{29}}
 
 \begin{document}
 
@@ -31,22 +29,40 @@
 \end{frame}
 
 
-\section{Problème de recherche}
-\subsection{Problématique} % Chapitre d'introduction
+\section{Problématique} % Chapitre d'introduction
+\begin{frame}{Titre}
+  contenu
+\end{frame}
 
-\subsection{Travaux reliés} % Chapitre de revue de littérature
+
+\section{Travaux reliés} % Chapitre de revue de littérature
+\begin{frame}{Titre}
+  contenu
+\end{frame}
 
 
-\section{Contributions}
-\subsection{Concept} % Chapitre du concept
+\section{Concept} % Chapitre du concept
+\begin{frame}{Titre}
+  contenu
+\end{frame}
 
-\subsection{Prototype} % Chapitre du visiocasque
 
-\subsection{Étude expérimentale} % Chapitre étude expérimentale
+\section{Prototype} % Chapitre du visiocasque
+\begin{frame}{Titre}
+  contenu
+\end{frame}
+
+
+\section{Étude expérimentale} % Chapitre étude expérimentale
+\begin{frame}{Titre}
+  contenu
+\end{frame}
 
 
 \section{Discussion} % Chapitre discussion
-
+\begin{frame}{Titre}
+  contenu
+\end{frame}
 
 \section*{Conclusion}
 \begin{frame}{Conclusion}
@@ -60,11 +76,7 @@
 
 \appendix
 \section<presentation>*{\appendixname}
-\subsection<presentation>*{Bibliographie}
-
-\begin{frame}[allowframebreaks]{Bibliographie}
-  \begin{thebibliography}{10}
-  \end{thebibliography}
+\begin{frame}{Bibliographie}
 \end{frame}
 
 \end{document}
