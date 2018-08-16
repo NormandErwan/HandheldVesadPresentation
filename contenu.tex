@@ -5,6 +5,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
+\setbeamertemplate{caption}{\raggedright\insertcaption\par} % Suppression du Figure ou Table préfixé dans les \caption par beamer :  https://tex.stackexchange.com/a/82460
+
 \mode<presentation> {
   \usetheme{default}
   \useinnertheme{circles}
@@ -12,50 +14,77 @@
   \usecolortheme[rgb={0.9,0,0}]{structure}
 }
 
-\title[Agrandissement d'un écran mobile par RA]{Agrandissement d'un écran mobile par réalité augmentée}
-\author[Erwan Normand]{Erwan Normand}% \\ \small{\texttt{normand.erwan@protonmail.com}}}
-%\institute{École de Technologie Supérieure}
+\AtBeginSection[] {
+  \begin{frame}<beamer>{Plan de la soutenance}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\title{Agrandissement d'un écran mobile par réalité augmentée}
+\author{Erwan Normand}
 \institute{Soutenance de mémoire de maîtrise}
 \date{\frenchdate{2018}{08}{29}}
 
+\newcommand{\twocols}[2]{% Side-By-Side colums
+  \begin{columns}%
+    \begin{column}{0.5\textwidth}#1\end{column}%
+    \begin{column}{0.5\textwidth}#2\end{column}%
+  \end{columns}%
+}
+\newcommand{\captionfigure}[3][1]{%
+  \begin{figure}%
+    \includegraphics[width=#1\textwidth]{figures/#2}%
+    \caption{#3}%
+  \end{figure}%
+}
+
 \begin{document}
 
-\maketitle
+\frame{\maketitle}
 
 \begin{frame}{Plan de la soutenance}
   \tableofcontents
 \end{frame}
 
-
 \section{Problématique} % Chapitre d'introduction
-\begin{frame}{Titre}
-  contenu
+\begin{frame}{La réalité augmentée (RA)}
+  \twocols{
+    contenu
+  }{
+    \captionfigure{HoloLens_2}{Application dans le HoloLens.}
+  }
 \end{frame}
 
+\begin{frame}{Combinaison avec téléphone}
+  \twocols{
+    contenu
+  }{
+    \captionfigure{Heun2016}{Application de RA sur un téléphone.}
+  }
+\end{frame}
 
 \section{Travaux reliés} % Chapitre de revue de littérature
 \begin{frame}{Titre}
   contenu
 \end{frame}
 
-
 \section{Concept} % Chapitre du concept
 \begin{frame}{Titre}
-  contenu
+  \begin{figure}
+    \includegraphics[height=6cm]{figures/HandheldVESADMidAirInArOut}
+    \caption{Photomontage de notre prototype.}
+  \end{figure}
 \end{frame}
-
 
 \section{Prototype} % Chapitre du visiocasque
 \begin{frame}{Titre}
   contenu
 \end{frame}
 
-
 \section{Étude expérimentale} % Chapitre étude expérimentale
 \begin{frame}{Titre}
   contenu
 \end{frame}
-
 
 \section{Discussion} % Chapitre discussion
 \begin{frame}{Titre}
@@ -64,11 +93,6 @@
 
 \section*{Conclusion}
 \begin{frame}{Conclusion}
-  \begin{itemize}
-    \item Le \alert{premier message principal} de l'exposé en une ligne ou deux.
-    \item Le \alert{deuxième message principal} de l'exposé en une ligne ou deux.
-    \item Peut-être un \alert{troisième message}, mais pas plus que ça.
-  \end{itemize}
 \end{frame}
 
 
