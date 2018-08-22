@@ -11,7 +11,7 @@
   \usetheme{default}
   \useinnertheme{circles}
   \useoutertheme[subsections=false]{smoothbars}
-  \usecolortheme[rgb={0.9,0,0}]{structure}
+  \usecolortheme[rgb={0.8,0,0}]{structure}
 }
 
 \AtBeginSection[] {
@@ -33,7 +33,7 @@
 }
 \newcommand{\captionfigure}[3][1]{%
   \begin{figure}%
-    \includegraphics[width=#1\textwidth]{figures/#2}%
+    \includegraphics[width=#1\textwidth, height=5cm, keepaspectratio]{figures/#2}%
     \caption{#3}%
   \end{figure}%
 }
