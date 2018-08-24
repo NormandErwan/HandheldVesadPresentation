@@ -31,9 +31,12 @@
     \begin{column}{0.5\textwidth}#2\end{column}%
   \end{columns}%
 }
+\newcommand{\figuregraphic}[2][1]{%
+  \includegraphics[width=#1\textwidth, height=5cm, keepaspectratio]{figures/#2}%
+}
 \newcommand{\figurecaption}[3][1]{%
   \begin{figure}%
-    \includegraphics[width=#1\textwidth, height=5cm, keepaspectratio]{figures/#2}%
+    \figuregraphic[#1]{#2}
     \caption{#3}%
   \end{figure}%
 }
@@ -47,15 +50,14 @@
 \end{frame}
 
 \input{1_problematique}
-\input{2_litterature}
-\input{3_concept}
-\input{4_prototype}
-\input{5_experience}
-\input{6_discussion}
-\input{7_conclusion}
+\input{2_concept}
+\input{3_prototype}
+\input{4_experience}
+\input{5_discussion}
+\input{6_conclusion}
 
 \appendix
 \section<presentation>*{\appendixname}
-\input{8_bibliographie}
+\input{7_bibliographie}
 
 \end{document}
