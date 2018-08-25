@@ -1,77 +1,72 @@
 \section{Problématique}
 
-\begin{frame}{La réalité augmentée (RA)}
-  \twocols{
-    \begin{itemize}[<+->]
-      \item Définition : contenu virtuel inséré dans l'environnement réel.
-      \item Avancées techniques en 2016/2017 : HoloLens, ARKit, ARCore.
-      \item Usages très prometteurs.
-      \item Les interfaces humain-machine en RA sont peu maîtrisées.
-    \end{itemize}
-  }{
-    \only<1>{\figurecaption{MobileAR}{Application de RA sur téléphone [Wikipedia]}}
-    \only<2>{\figurecaption{HoloLens_1}{Publicité du visiocasque HoloLens [Microsoft]}}
-    \only<3>{\figurecaption{HoloLens_2}{Skype sur le HoloLens [Microsoft]}}
-    \only<4>{\figurecaption{UnityFutureMRPartIII2017}{Bureau de travail en RA [Unity]}}
-  }
-\end{frame}
+\twocolsframe{La réalité augmentée (RA)}{
+  \begin{itemize}[<+->]
+    \item Définition : contenu virtuel inséré dans l'environnement réel.
+    \item Avancées techniques en 2016/2017 : HoloLens, ARKit, ARCore.
+    \item Usages très prometteurs.
+    \item Les interfaces humain-machine en RA sont peu maîtrisées.
+  \end{itemize}
+}{
+  \only<1>{\figurecaption{MobileAR}{Application de RA sur téléphone [Wikipedia]}}
+  \only<2>{\figurecaption{HoloLens_1}{Publicité du visiocasque HoloLens [Microsoft]}}
+  \only<3>{\figurecaption{HoloLens_2}{Skype sur le HoloLens [Microsoft]}}
+  \only<4>{\figurecaption{UnityFutureMRPartIII2017}{Bureau de travail en RA [Unity]}}
+}
 
-\begin{frame}{Les interfaces humain-machine (IHM)}
-  \twocols{
-    \begin{itemize}[<+->]
-      \item IHM : interface d'un utilisateur avec un ordinateur.
-      \item Trouver les techniques d'interactions les plus adaptées.
-      \item Réduire l'écart entre entrées et sorties.
-    \end{itemize}
-  }{
-    \figurecaption{Billinghurst2005}{Principe d'une IHM \cite{Billinghurst2005}}
-  }
-\end{frame}
+\twocolsframe{Les interfaces humain-machine (IHM)}{
+  \begin{itemize}[<+->]
+    \item IHM : interface d'un utilisateur avec un ordinateur.
+    \item Trouver les techniques d'interactions les plus adaptées.
+    \item Réduire l'écart entre entrées et sorties.
+  \end{itemize}
+}{
+  \figurecaption{Billinghurst2005}{Principe d'une IHM \cite{Billinghurst2005}}
+}
 
-\begin{frame}{Les IHM pour la RA}
-  \twocols{
+\twocolsframe{Les IHM pour la RA}{
+  \begin{itemize}
+    \item<1-> La RA permettrait de fondre l'ordinateur avec l'environnement.
+    \item<2-> Mais encore aucun paradigme d'IHM pour la RA.
+    \item<3-> Difficile car entrées \alert{et} sorties sont en 3D.
+    \item<4-> Techniques d'interactions courantes :
     \begin{itemize}
-      \item<1-> La RA permettrait de fondre l'ordinateur avec l'environnement.
-      \item<2-> Mais encore aucun paradigme d'IHM pour la RA.
-      \item<3-> Difficile car entrées \alert{et} sorties sont en 3D.
-      \item<4-> Techniques d'interactions courantes :
-      \begin{itemize}
-        \item Main virtuelle
-        \item<5-> Pointeur virtuel
-      \end{itemize}
+      \item Main virtuelle
+      \item<5-> Pointeur virtuel
     \end{itemize}
-  }{
-    \only<1>{\figurecaption{Serrano2015_1}{Gluey \cite{Serrano2015}}}
-    \only<2>{\figurecaption{Serrano2015a_1}{Desktop-Gluey \cite{Serrano2015a}}}
-    \only<3>{\figurecaption{Lee2013}{SpaceTop \cite{Lee2013}}}
-    \only<4>{\figurecaption{Taylor2016}{Main virtuelle \cite{Taylor2016}}}
-    \only<5>{\figurecaption{Pfeuffer2017_1}{Pointeur virtuel \cite{Pfeuffer2017}}}
-  }
-\end{frame}
+  \end{itemize}
+}{
+  \only<1>{\figurecaption{Serrano2015_1}{Gluey \cite{Serrano2015}}}
+  \only<2>{\figurecaption{Serrano2015a_1}{Desktop-Gluey \cite{Serrano2015a}}}
+  \only<3>{\figurecaption{Lee2013}{SpaceTop \cite{Lee2013}}}
+  \only<4>{\figurecaption{Taylor2016}{Main virtuelle \cite{Taylor2016}}}
+  \only<5>{\figurecaption{Pfeuffer2017_1}{Pointeur virtuel \cite{Pfeuffer2017}}}
+}
 
-\begin{frame}{Augmenter un téléphone par RA}
-  \twocols{
-    \begin{itemize}[<+->]
-      \item Les téléphones ont une taille limitée pour être tenu en main.
-      \item Un plus grand écran serait utile.
-      \item La RA permet de s'entourer de multiples écrans.
-      \item Les interactions tactiles sont précises et connues.
-      \item Des interactions sur un écran virtuel pourraient être intuives mais difficiles.
-    \end{itemize}
-  }{
-    \only<1>{\figurecaption{Heun2016}{Reality Editor \cite{Heun2016}}}
-    \only<2>{\figurecaption{Grubert2015_2}{MultiFi \cite{Grubert2015}}}
-    \only<3>{\figurecaption{Ens2014_2}{Personal Cockpit \cite{Ens2014}}}
-    \only<4>{\figurecaption{Serrano2015a_3}{Desktop-Gluey \cite{Serrano2015a}}}
-    \only<5>{\figurecaption{LeapMotion2018_3}{Visiocasque de RA North Star [LeapMotion]}}
-  }
-\end{frame}
+\twocolsframe{Augmenter un téléphone par RA}{
+  \begin{itemize}[<+->]
+    \item Les téléphones ont une taille limitée pour être tenu en main.
+    \item Un plus grand écran serait utile.
+    \item La RA permet de s'entourer de multiples écrans.
+    \item Les interactions tactiles sont précises et connues.
+    \item Des interactions sur un écran virtuel pourraient être intuives mais difficiles.
+  \end{itemize}
+}{
+  \only<1>{\figurecaption{Heun2016}{Reality Editor \cite{Heun2016}}}
+  \only<2>{\figurecaption{Grubert2015_2}{MultiFi \cite{Grubert2015}}}
+  \only<3>{\figurecaption{Ens2014_2}{Personal Cockpit \cite{Ens2014}}}
+  \only<4>{\figurecaption{Serrano2015a_3}{Desktop-Gluey \cite{Serrano2015a}}}
+  \only<5>{\figurecaption{LeapMotion2018_3}{Visiocasque de RA North Star [LeapMotion]}}
+}
 
 \begin{frame}{Problématique}
-  \begin{block}<1->{}
-     Est-ce qu’un téléphone à écran étendu donne un avantage à un utilisateur par rapport à un téléphone non-étendu ?
+  \begin{block}{}
+    Nom du concept : Virtually Extended Screen-Aligned Display (VESAD) / écran étendu.    
   \end{block}
-  \begin{block}<2->{}
-    Est-il préférable d’interagir avec une main virtuelle directement sur l’écran virtuel, autour du téléphone, ou en utilisant seulement l’écran tactile ?
+  \begin{block}{}
+    \begin{enumerate}[<+(1)->]
+      \item Est-ce qu’un téléphone à écran étendu donne un avantage à un utilisateur par rapport à un téléphone non-étendu ?
+      \item Est-il préférable d’interagir avec une main virtuelle directement sur l’écran virtuel, autour du téléphone, ou en utilisant seulement l’écran tactile ?
+    \end{enumerate}
   \end{block}
 \end{frame}

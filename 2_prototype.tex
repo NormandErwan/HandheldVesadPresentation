@@ -1,5 +1,60 @@
-\section{Prototype}
+\section{Prototype de visiocasque de RA}
 
-\begin{frame}{Titre}
-  contenu
-\end{frame}
+\twocolsframe{Conception}{
+  \begin{itemize}[<+->]
+    \item Besoin : visiocasque à large champs de vision.
+    \item Solution :
+    \begin{itemize}
+      \item<.-> Diffuser une caméra stéréoscopique dans un visiocasque de réalité virtuelle (RV).
+      \item Réplication de l'AR-Rift \cite{Steptoe2013}.
+    \end{itemize}
+    \item Contribution : 
+    \begin{itemize}
+      \item Documenter la conception.
+      \item Produire la bibliothèque ArucoUnity.
+    \end{itemize}
+  \end{itemize}
+}{
+  \only<1>{\figurecaption{Fov}{Champs de vision}}
+  \only<2>{\figurecaption{ArRift_1}{Notre AR-Rift}}
+  \only<3->{\figurecaption{ArRift_2}{Notre AR-Rift porté}}
+}
+
+\twocolsframe{Fonctionnement}{
+  \begin{enumerate}[<+->]
+    \item Capture de l'image avec la caméra physique.
+    \item Correction de l'image.
+    \item Une caméra virtuelle filme les éléments virtuels et l'image corrigée en arrière-plan.
+    \item Diffusion du résultat dans le visiocasque de RV.
+  \end{enumerate}
+}{
+  \only<1>{\figurecaption{ArRiftMarker_1}{Image fisheye}}
+  \only<2>{\figurecaption{ArRiftMarker_2}{Image fisheye corrigée}}
+  \only<3>{\figurecaption{ArRiftMarker_3}{Caméra virtuelle filmant la scène et l'image corrigée}}
+  \only<4>{\figurecaption{ArRiftMarker_4}{Résultat dans le visiocasque}}
+}
+
+\twocolsframe{ArucoUnity}{
+  \begin{itemize}[<+->]
+    \item Greffon pour le moteur 3D Unity.
+    \item<.-> Utilise la bibliothèque libre OpenCV.
+    \item Prise en charge des caméras stéréoscopique, fisheye. 
+    \item Étalonnage de la caméra.
+    \item Suivi de marqueurs en temps réel.
+  \end{itemize}
+}{
+  \only<1>{
+    \begin{figure}
+      \twocols{\figuregraphic{UnityLogo}}{\figuregraphic[0.8]{OpenCvLogo}}
+      \caption{Logos d'Unity et d'OpenCV}
+    \end{figure}
+  }
+  \only<2>{\figurecaption{OvrvisionTracking_2}{RA dans notre visiocasque}}
+  \only<3>{\figurecaption{OvrvisionCalibration_3}{Étalonnage de notre camera}}
+  \only<4->{
+    \begin{figure}
+      \twocols{\figuregraphic{TrackMarkersDemo_2}}{\figuregraphic{TrackMarkersDemo_3}}
+      \caption{RA par suivi de marqueur}
+    \end{figure}
+  }
+}

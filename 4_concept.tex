@@ -1,5 +1,31 @@
-\section{Discussion}
+\section{Discussion du concept}
 
-\begin{frame}{Titre}
-  contenu
-\end{frame}
+\twocolsframe{Concept}{
+  \begin{itemize}[<+->]
+    \item Première contribution : explorer l'IHM d'un écran
+    \item Écran étendu ou VESAD (Virtually Extended Screen-Aligned Display).
+  \end{itemize}
+}{
+  \only<1>{\figurecaption{HandheldVESADApps}{Applications en vue multi-fenêtres}}
+  \only<2>{
+    \begin{figure}
+      \twocols{\figuregraphic{HandheldVESADMap}}{\figuregraphic{HandheldVESADDogs}}
+      \caption{Applications en vue étendue}
+    \end{figure}
+  }
+}
+
+\twocolsframe{Techniques d'interactions}{
+  \begin{itemize}
+    \item<1-> Wrist : pour basculer entre les applications.
+    \item<2-> Slide-to-hang : détacher une fenêtre de l'écran.
+  \end{itemize}
+}{
+  \only<1>{
+    \begin{figure}
+      \twocols{\figuregraphic{HandheldVESADApps}}{\figuregraphic{HandheldVESADApps2}}
+      \caption{Wrist}
+    \end{figure}
+  }
+  \only<2>{\figurecaption{HandheldVESADSlideToHang}{Slide-to-hang}}
+}
