@@ -1,4 +1,9 @@
+% !TEX root
+% !TEX program = latexmk
+
 % Largement inspiré par l'excellent exemple français de présentation de Till Tantau (2004) et Philippe de Sousa (2006) : https://github.com/josephwright/beamer/blob/master/doc/solutions/conference-talks/conference-ornate-20min.fr.tex
+
+\documentclass[aspectratio=169]{beamer}
 
 \usepackage{lmodern}
 \usepackage[french]{babel}
@@ -40,6 +45,7 @@
   \includegraphics[width=#1\textwidth, height=5cm, keepaspectratio]{figures/#2}%
 }
 \newcommand{\figurecaption}[3][1]{%
+  \vspace{-1cm}
   \begin{figure}%
     \figuregraphic[#1]{#2}
     \caption{#3}%
