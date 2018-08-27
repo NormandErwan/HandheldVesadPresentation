@@ -9,6 +9,7 @@
 \usepackage[french]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{multimedia}
 
 \setbeamertemplate{caption}{\raggedright\insertcaption\par} % Suppression du Figure ou Table préfixé dans les \caption par beamer :  https://tex.stackexchange.com/a/82460
 
@@ -50,6 +51,12 @@
     \figuregraphic[#1]{#2}
     \caption{#3}%
   \end{figure}%
+}
+\newcommand{\externalmovie}[4][1]{%
+  \begin{center}%
+    \movie[externalviewer]{\figuregraphic[#1]{#2}}{figures/#4}\\%
+    #3%
+  \end{center}%
 }
 
 \begin{document}
