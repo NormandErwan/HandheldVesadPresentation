@@ -45,18 +45,31 @@
 \newcommand{\figuregraphic}[2][1]{%
   \includegraphics[width=#1\textwidth, height=5cm, keepaspectratio]{figures/#2}%
 }
-\newcommand{\figurecaption}[3][1]{%
-  \vspace{-1cm}
-  \begin{figure}%
-    \figuregraphic[#1]{#2}
-    \caption{#3}%
-  \end{figure}%
+\newcommand<>{\figurecaption}[3][1]{%
+  \only#4{%
+    \vspace{-1cm}
+    \begin{figure}%
+      \figuregraphic[#1]{#2}
+      \caption{#3}%
+    \end{figure}%
+  }%
 }
-\newcommand{\externalmovie}[4][1]{%
-  \begin{center}%
-    \movie[externalviewer]{\figuregraphic[#1]{#2}}{figures/#4}\\%
-    #3%
-  \end{center}%
+\newcommand<>{\twocolsfigure}[4][1]{%
+  \only#5{%
+    \vspace{-1cm}
+    \begin{figure}%
+      \twocols{\figuregraphic[#1]{#2}}{\figuregraphic[#1]{#3}}
+      \caption{#4}%
+    \end{figure}%
+  }%
+}
+\newcommand<>{\externalmovie}[4][1]{%
+  \only#5{%
+    \begin{center}%
+      \movie[externalviewer]{\figuregraphic[#1]{#2}}{figures/#4}\\%
+      #3%
+    \end{center}%
+  }%
 }
 
 \begin{document}

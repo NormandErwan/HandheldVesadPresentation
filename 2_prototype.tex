@@ -15,9 +15,9 @@
     \end{itemize}
   \end{itemize}
 }{
-  \only<1>{\figurecaption{Fov.png}{Champs de vision}}
-  \only<2>{\figurecaption{ArRift_1.jpg}{Notre AR-Rift}}
-  \only<3->{\figurecaption{ArRift_2.jpg}{Notre AR-Rift porté}}
+  \figurecaption<1>{Fov.png}{Champs de vision}
+  \figurecaption<2>{ArRift_1.jpg}{Notre AR-Rift}
+  \figurecaption<3->{ArRift_2.jpg}{Notre AR-Rift porté}
 }
 
 \twocolsframe{Fonctionnement}{
@@ -28,10 +28,10 @@
     \item Diffusion du résultat dans le visiocasque de RV.
   \end{enumerate}
 }{
-  \only<1>{\figurecaption{ArRiftMarker_1.jpg}{Image fisheye}}
-  \only<2>{\figurecaption{ArRiftMarker_2.jpg}{Image fisheye corrigée}}
-  \only<3>{\figurecaption{ArRiftMarker_3.jpg}{Caméra virtuelle filmant la scène et l'image corrigée}}
-  \only<4>{\figurecaption{ArRiftMarker_4.jpg}{Résultat dans le visiocasque}}
+  \figurecaption<1>{ArRiftMarker_1.jpg}{Image fisheye}
+  \figurecaption<2>{ArRiftMarker_2.jpg}{Image fisheye corrigée}
+  \figurecaption<3>{ArRiftMarker_3.jpg}{Caméra virtuelle filmant la scène et l'image corrigée}
+  \figurecaption<4>{ArRiftMarker_4.jpg}{Résultat dans le visiocasque}
 }
 
 \twocolsframe{ArucoUnity}{
@@ -43,18 +43,8 @@
     \item Suivi de marqueurs en temps réel.
   \end{itemize}
 }{
-  \only<1>{
-    \begin{figure}
-      \twocols{\figuregraphic{UnityLogo.png}}{\figuregraphic[0.8]{OpenCvLogo.png}}
-      \caption{Logos d'Unity et d'OpenCV}
-    \end{figure}
-  }
-  \only<2>{\figurecaption{OvrvisionTracking_2.jpg}{RA dans notre visiocasque}}
-  \only<3>{\figurecaption{OvrvisionCalibration_3.jpg}{Étalonnage de notre camera}}
-  \only<4->{
-    \begin{figure}
-      \twocols{\figuregraphic{TrackMarkersDemo_2.jpg}}{\figuregraphic{TrackMarkersDemo_3.jpg}}
-      \caption{RA par suivi de marqueur}
-    \end{figure}
-  }
+  \twocolsfigure<1>{UnityLogo.png}{OpenCvLogo.png}{Logos d'Unity et d'OpenCV}
+  \figurecaption<2>{OvrvisionTracking_2.jpg}{RA dans notre visiocasque}
+  \figurecaption<3>{OvrvisionCalibration_3.jpg}{Étalonnage de notre camera}
+  \twocolsfigure<4->{TrackMarkersDemo_2.jpg}{TrackMarkersDemo_3.jpg}{RA par suivi de marqueur}
 }

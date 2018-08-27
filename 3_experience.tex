@@ -12,8 +12,8 @@
     \end{itemize}
   \end{itemize}
 }{
-  \only<2>{\figurecaption{Liu2014.jpg}{Tâche expérimentale de \cite{Liu2014}}}
-  \only<3>{\figurecaption{HandheldVESADMidAirInArOut.jpg}{Notre tâche expérimentale}}
+  \figurecaption<2>{Liu2014.jpg}{Tâche expérimentale de \cite{Liu2014}}
+  \figurecaption<3>{HandheldVESADMidAirInArOut.jpg}{Notre tâche expérimentale}
   \only<4>{
     \begin{figure}
       \twocols{\figuregraphic[0.7]{Wobbrock2009_1.jpg}}{\figuregraphic{Wobbrock2009_2.jpg}}
@@ -21,12 +21,7 @@
       \caption{Gestes de sélection, de déplacement et d'agrandissement \cite{Wobbrock2009}}
     \end{figure}
   }
-  \only<5>{
-    \begin{figure}
-      \twocols{\figuregraphic{Piumsomboon2013_2.jpg}}{\figuregraphic{Piumsomboon2013_3.jpg}}
-      \caption{Gestes de sélection et de déplacement \cite{Piumsomboon2013}}
-    \end{figure}
-  }
+  \twocolsfigure<5>{Piumsomboon2013_2.jpg}{Piumsomboon2013_3.jpg}{Gestes de sélection et de déplacement \cite{Piumsomboon2013}}
 }
 
 \twocolsframe{Plan expérimental}{
@@ -45,10 +40,10 @@
     \item<+(1)-> Facteur emboîté : ordre de passage IHM, 3 groupes, en carré latin.
   \end{itemize}
 }{
-  \only<2>{\externalmovie{ExperimentPhoneOnly.jpg}{(1) Téléphone}{ExperimentPhoneOnly.mp4}}
-  \only<3>{\externalmovie{ExperimentPhoneInArOut.jpg}{(2) VESAD tactile}{ExperimentPhoneInArOut.mp4}}
-  \only<4>{\externalmovie{ExperimentMidAirInArOut.jpg}{(3) VESAD}{ExperimentMidAirInArOut.mp4}}
-  \only<5-7>{\figurecaption{TaskGrid}{Grille de la tâche}}
+  \externalmovie<2>{ExperimentPhoneOnly.jpg}{(1) Téléphone}{ExperimentPhoneOnly.mp4}
+  \externalmovie<3>{ExperimentPhoneInArOut.jpg}{(2) VESAD tactile}{ExperimentPhoneInArOut.mp4}
+  \externalmovie<4>{ExperimentMidAirInArOut.jpg}{(3) VESAD}{ExperimentMidAirInArOut.mp4}
+  \figurecaption<5-7>{TaskGrid}{Grille de la tâche}
   \framezoom<5><6>(8.5cm,1cm)(3cm,2cm)
   \only<8>{
     \begin{table}
@@ -81,8 +76,8 @@
     \end{itemize}
   \end{itemize}
 }{
-  \only<4-7>{\figurecaption{tct}{Temps de complétion moyen (moyenne arithmétique).}}
-  \only<8-9>{\figurecaption{tct_ordering}{Temps de complétion moyen par groupe.}}
+  \figurecaption<4-7>{tct}{Temps de complétion moyen (moyenne arithmétique).}
+  \figurecaption<8-9>{tct_ordering}{Temps de complétion moyen par groupe.}
   \framezoom<8><9>(6.8cm,0.5cm)(3.5cm,3.5cm)
 }
 
@@ -99,8 +94,8 @@
     \end{itemize}
   \end{itemize}
 }{
-  \only<2>{\figurecaption{selections}{Sélections moyennes de disques}}
-  \only<3>{\figurecaption{errors}{Erreurs moyennes}}
+  \figurecaption<2>{selections}{Sélections moyennes de disques}
+  \figurecaption<3>{errors}{Erreurs moyennes}
 }
 
 \twocolsframe{Résultats}{
@@ -111,5 +106,5 @@
     \end{itemize}
   \end{itemize}
 }{
-  \only<4>{\figurecaption{preferences_distribution}{}}
+  \figurecaption<4>{preferences_distribution}{}
 }
