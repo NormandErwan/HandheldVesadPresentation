@@ -1,8 +1,6 @@
 % !TEX root
 % !TEX program = latexmk
 
-% Largement inspiré par l'excellent exemple français de présentation de Till Tantau (2004) et Philippe de Sousa (2006) : https://github.com/josephwright/beamer/blob/master/doc/solutions/conference-talks/conference-ornate-20min.fr.tex
-
 \documentclass[aspectratio=169]{beamer}
 
 \usepackage{lmodern}
@@ -11,7 +9,9 @@
 \usepackage[T1]{fontenc}
 \usepackage{multimedia}
 
-\setbeamertemplate{caption}{\raggedright\insertcaption\par} % Suppression du Figure ou Table préfixé dans les \caption par beamer :  https://tex.stackexchange.com/a/82460
+% Beamer configuration
+
+\setbeamertemplate{caption}{\raggedright\insertcaption\par} % Remove Figure or Table prefix in \caption:  https://tex.stackexchange.com/a/82460
 
 \mode<presentation> {
   \usetheme{default}
@@ -26,10 +26,7 @@
   \end{frame}
 }
 
-\title{Agrandissement d'un écran mobile par réalité augmentée}
-\author{Erwan Normand}
-\institute{Soutenance de mémoire de maîtrise}
-\date{\frenchdate{2018}{08}{29}}
+% Custom commands
 
 \newcommand{\twocols}[2]{% Two side-by-side colums
   \begin{columns}%
@@ -47,7 +44,7 @@
 }
 \newcommand<>{\figurecaption}[3][1]{%
   \only#4{%
-    \vspace{-1cm}
+    \vspace{-.5cm}
     \begin{figure}%
       \figuregraphic[#1]{#2}
       \caption{#3}%
@@ -56,7 +53,7 @@
 }
 \newcommand<>{\twocolsfigure}[4][1]{%
   \only#5{%
-    \vspace{-1cm}
+    \vspace{-.5cm}% Hack: visually better vertical centering
     \begin{figure}%
       \twocols{\figuregraphic[#1]{#2}}{\figuregraphic[#1]{#3}}
       \caption{#4}%
@@ -71,6 +68,15 @@
     \end{center}%
   }%
 }
+
+% Title configuration
+
+\title{Agrandissement d'un écran mobile par réalité augmentée}
+\author{Erwan Normand}
+\institute{Soutenance de mémoire de maîtrise}
+\date{\frenchdate{2018}{08}{29}}
+
+% Document
 
 \begin{document}
 
