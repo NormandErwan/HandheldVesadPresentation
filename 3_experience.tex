@@ -35,9 +35,9 @@
         \item VESAD
       \end{enumerate}
       \item Taille du texte : grand, petit.
-      \item Difficulté : facile, difficile.
+      \item Difficulté (distance moyenne disque-cellule) : facile, difficile.
     \end{itemize}
-    \item<+(1)-> Facteur emboîté : ordre de passage IHM, 3 groupes, en carré latin.
+    \item<+-> Facteur emboîté : ordre de passage IHM, 3 groupes, en carré latin.
   \end{itemize}
 }{
   \externalmovie<2>{ExperimentPhoneOnly.jpg}{(1) Téléphone}{ExperimentPhoneOnly.mp4}
@@ -75,9 +75,9 @@
     \end{itemize}
   \end{itemize}
 }{
-  \figurecaption<4>{tct}{Temps de complétion moyen (moyenne arithmétique)}
-  \figurecaption<5-6>{tct_ordering}{Temps de complétion moyen par groupe}
-  \framezoom<5><6>(6.8cm,0.6cm)(3.7cm,3.7cm)
+  \figurecaption<4>{tct}{Temps de complétion moyen}
+  \figurecaption<5-7>{tct_ordering}{Temps de complétion moyen par groupe}
+  \framezoom<5><6>(6.5cm,0.5cm)(3.7cm,3.7cm)
 }
 
 \twocolsframe{Résultats}{
@@ -100,19 +100,40 @@
   \begin{itemize}[<+->]
     \item Navigation
     \begin{itemize}
-      \item .
+      \item VESAD : navigation physique.
+      \item Téléphone et VESAD tactile :
+      \begin{itemize}
+        \item 5-6 défilements par disque.
+        \item<.-> Téléphone : 3 zooms par disque.
+        \item<.-> VESAD tactile : 1 zoom par disque.
+        \item Différences similaires en temps.
+      \end{itemize}
     \end{itemize}
   \end{itemize}
 }{
+  \figurecaption<1-4>{navigation_count}{} \framezoom<1><2>(6.5cm,0.5cm)(4cm,3.7cm)
+  \figurecaption<5-6>{navigation_time}{}  \framezoom<5><6>(6.5cm,0cm)(4cm,3.5cm)
 }
 
 \twocolsframe{Résultats}{
   \begin{itemize}[<+->]
-    \item Notes des participants
+    \item Notes des participants :
     \begin{itemize}
-      \item Inspiré du NASA TLX.
+      \item Facile à comprendre.
+      \item Mentalement facile à utiliser.
+      \item Physiquement facile à utiliser.
+      \item Rapidité perçue.
+      \item Performance perçue.
+      \item Frustration.
+      \item Préférences.
     \end{itemize}
   \end{itemize}
 }{
-  \figurecaption<4>{preferences_distribution}{}
+  \figurecaption<3>{easy_understand.png}{Facile à comprendre.}
+  \figurecaption<4>{mentally_easy.png}{Mentalement facile à utiliser.}
+  \figurecaption<5>{physically_easy.png}{Physiquement facile à utiliser.}
+  \figurecaption<6>{speed.png}{Rapidité perçue.}
+  \figurecaption<7>{performance.png}{Performance perçue.}
+  \figurecaption<8>{frustration.png}{Frustration.}
+  \figurecaption<9>{preferences.png}{Préférences.}
 }

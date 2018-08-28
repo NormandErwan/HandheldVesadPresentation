@@ -1,31 +1,60 @@
 \section{Discussion du concept}
 
-\twocolsframe{Concept}{
+\twocolsframe{Retour sur l'étude expérimentale}{
   \begin{itemize}[<+->]
-    \item Première contribution : explorer l'IHM d'un écran
-    \item Écran étendu ou VESAD (Virtually Extended Screen-Aligned Display).
+    \item Problématique :
+    \begin{itemize}
+      \item Les participants ont préféré l'écran étendu au téléphone seul.
+      \item Les interactions tactiles ont été plus performantes que la main virtuelle.
+      \item Certaines tâches bénéfieraient donc d'un écran étendu.
+    \end{itemize}
+    \item Limites :
+    \begin{itemize}
+      \item Difficulté mal conçue.
+      \item Suivi de la main trop peu fiable.
+      \item Mauvaise résolution du visiocasque.
+    \end{itemize}
   \end{itemize}
 }{
-  \only<1>{\figurecaption{HandheldVESADApps.jpg}{Applications en vue multi-fenêtres}}
-  \only<2>{
-    \begin{figure}
-      \twocols{\figuregraphic{HandheldVESADMap.jpg}}{\figuregraphic{HandheldVESADDogs.jpg}}
-      \caption{Applications en vue étendue}
-    \end{figure}
-  }
+  \figurecaption{HandheldVESADMidAirInArOut.jpg}{Notre tâche expérimentale}
 }
 
-\twocolsframe{Techniques d'interactions}{
-  \begin{itemize}
-    \item<1-> Wrist : pour basculer entre les applications.
-    \item<2-> Slide-to-hang : détacher une fenêtre de l'écran.
+\twocolsframe{Concevoir une IHM pour un VESAD}{
+  \begin{itemize}[<+->]
+    \item Recommandations :
+    \begin{itemize}
+      \item Penser l'IHM à travers l'interaction.
+      \item L'IHM s'adapte au contexte.
+      \item Main virtuelle : le suivi est continu, besoin d'actions discrètes.
+    \end{itemize}
+    \item Exemple d'applications :
+    \begin{itemize}
+      \item En vue multi-fenêtres.
+      \item En vue étendue.
+    \end{itemize}
+    \item Techniques d'interactions :
+    \begin{itemize}
+      \item Wrist : basculer entre les applications.
+      \item Slide-to-hang : détacher une fenêtre de l'écran.
+    \end{itemize}
   \end{itemize}
 }{
-  \only<1>{
-    \begin{figure}
-      \twocols{\figuregraphic{HandheldVESADApps.jpg}}{\figuregraphic{HandheldVESADApps2.jpg}}
-      \caption{Wrist}
-    \end{figure}
-  }
-  \only<2>{\figurecaption{HandheldVESADSlideToHang.jpg}{Slide-to-hang}}
+  \twocolsfigure<2-3>{HandheldVESADzones_1.png}{HandheldVESADzones_2.png}{Gauche : main virtuelle. Droite : écran tactile. Zones d'interactions (vert, jaune) et visualisation seulement (blanc).}
+  \figurecaption<4>{LeapMotion2018_3.jpg}{Visiocasque de RA North Star [LeapMotion]}
+  \figurecaption<6>{HandheldVESADApps3.jpg}{Applications en vue multi-fenêtres}
+  \twocolsfigure<7>{HandheldVESADMap.jpg}{HandheldVESADDogs.jpg}{Applications en vue étendue}
+  \twocolsfigure<9>{HandheldVESADApps.jpg}{HandheldVESADApps2.jpg}{Wrist}
+  \figurecaption<10>{HandheldVESADSlideToHang.jpg}{Slide-to-hang}
+}
+
+\twocolsframe{Directions futures}{
+  \begin{itemize}
+    \item Évaluer un pointeur virtuel.
+    \item Tester des applications réelles.
+    \item Déterminer taille idéale écran étendu.
+    \item Explorer changements de contextes.
+  \end{itemize}
+}{
+  \figurecaption<1>{Pfeuffer2017_1.jpg}{Pointeur virtuel \cite{Pfeuffer2017}}
+  \twocolsfigure<2->{HandheldVESADApps3.jpg}{HandheldVESADMap.jpg}{Applications sur un VESAD mobile}
 }
