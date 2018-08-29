@@ -2,7 +2,7 @@
 
 \twocolsframe{La réalité augmentée (RA)}{
   \begin{itemize}[<+->]
-    \item Définition : contenu virtuel inséré dans l'environnement réel.
+    \item Définition : contenu virtuel inséré en temps réel dans l'environnement réel.
     \item Avancées techniques en 2016/2017 : HoloLens, ARKit, ARCore.
     \item Usages très prometteurs.
     \item Les interfaces humain-machine en RA sont peu maîtrisées.
@@ -10,7 +10,7 @@
 }{
   \figurecaption<1>{MobileAR.jpg}{Application de RA sur téléphone [Wikipedia]}
   \figurecaption<2>{HoloLens_1.jpg}{Publicité du visiocasque HoloLens [Microsoft]}
-  \figurecaption<3>{HoloLens_2.jpg}{Skype sur le HoloLens [Microsoft]}
+  \figurecaption<3>{HoloLens_2.jpg}{Visioconférence sur le HoloLens [Microsoft]}
   \figurecaption<4>{UnityFutureMRPartIII2017.jpg}{Bureau de travail en RA [Unity]}
 }
 
@@ -27,8 +27,8 @@
 \twocolsframe{Les IHM pour la RA}{
   \begin{itemize}
     \item<1-> La RA permettrait de fondre l'ordinateur avec l'environnement.
-    \item<2-> Mais encore aucun paradigme d'IHM pour la RA.
-    \item<3-> Difficile car entrées \alert<3>{et} sorties sont en 3D.
+    \item<2-> Les IHM de RA sont encore dans un stade exploratoire.
+    \item<3-> Difficile car IHM en 3D.
     \item<4-> Techniques d'interactions courantes :
     \begin{itemize}
       \item Main virtuelle
@@ -46,23 +46,26 @@
 \twocolsframe{Augmenter un téléphone par RA}{
   \begin{itemize}[<+->]
     \item Les téléphones ont une taille limitée pour être tenu en main.
-    \item Un plus grand écran serait utile.
     \item La RA permet de s'entourer de multiples écrans.
-    \item Les interactions tactiles sont précises et connues.
-    \item Des interactions sur un écran virtuel pourraient être intuives mais difficiles.
+    \item Un plus grand écran serait utile.
     \item Concept : Virtually Extended Screen-Aligned Display (VESAD).
+    \item Quelles interactions ?
+    \begin{itemize}
+      \item Les interactions tactiles sont précises, fiables, stables, connues et tangibles.
+      \item Des interactions sur un écran virtuel pourraient être intuitives mais difficiles.
+    \end{itemize}
   \end{itemize}
 }{
   \figurecaption<1>{Heun2016.jpg}{Reality Editor \cite{Heun2016}}
-  \figurecaption<2>{Grubert2015_2.jpg}{MultiFi \cite{Grubert2015}}
-  \figurecaption<3>{Ens2014_2.jpg}{Personal Cockpit \cite{Ens2014}}
-  \figurecaption<4>{Serrano2015a_3.jpg}{Desktop-Gluey \cite{Serrano2015a}}
-  \figurecaption<5>{LeapMotion2018_3.jpg}{Visiocasque de RA North Star [LeapMotion]}
-  \figurecaption<6>{HandheldVESADApps.jpg}{Grille d'applications sur un VESAD mobile}
+  \figurecaption<2>{Ens2014_3.jpg}{Personal Cockpit \cite{Ens2014}}
+  \figurecaption<3>{Grubert2015_2.jpg}{MultiFi \cite{Grubert2015}}
+  \figurecaption<4>{HandheldVESADApps.jpg}{Grille d'applications sur un VESAD mobile}
+  \figurecaption<5>{Serrano2015a_3.jpg}{Desktop-Gluey \cite{Serrano2015a}}
+  \figurecaption<6>{LeapMotion2018_3.jpg}{Visiocasque de RA North Star [LeapMotion]}
 }
 
 \begin{frame}{Problématique}
-  \begin{enumerate}[<+->]
+  \begin{enumerate}[<+(1)->]
     \item Est-ce qu’un téléphone à écran étendu donne un avantage à un utilisateur par rapport à un téléphone non-étendu ?
     \item Est-il préférable d’interagir avec une main virtuelle directement sur l’écran virtuel, autour du téléphone, ou en utilisant seulement l’écran tactile ?
   \end{enumerate}

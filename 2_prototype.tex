@@ -4,12 +4,12 @@
   \begin{itemize}[<+->]
     \item Besoins :
     \begin{itemize}
-      \item Visiocasque à large champs de vision.
+      \item Visiocasque à large champ de vision.
       \item Suivre le téléphone en 3D.
     \end{itemize}
     \item Solution :
     \begin{itemize}
-      \item Diffuser une caméra stéréoscopique dans un visiocasque de réalité virtuelle (RV) \cite{Steptoe2013}.
+      \item Diffuser une caméra stéréoscopique fisheye dans un visiocasque de réalité virtuelle (RV) \cite{Steptoe2013}.
       \item Utiliser des marqueurs.
     \end{itemize}
     \item Contribution :
@@ -26,7 +26,7 @@
 \twocolsframe{Fonctionnement}{
   \begin{enumerate}[<+->]
     \item Capture de l'image avec la caméra physique.
-    \item Correction de l'image.
+    \item Correction de l'image : les lignes sont droites.
     \item Une caméra virtuelle filme les éléments virtuels et l'image corrigée en arrière-plan.
     \item Diffusion du résultat dans le visiocasque de RV.
   \end{enumerate}
@@ -41,13 +41,12 @@
   \begin{itemize}[<+->]
     \item Greffon pour le moteur 3D Unity.
     \item<.-> Utilise la bibliothèque libre OpenCV.
-    \item Prise en charge des caméras stéréoscopique, fisheye. 
-    \item Étalonnage de la caméra.
+    \item Prise en charge des caméras stéréoscopiques et des objectifs fisheyes.
     \item Suivi de marqueurs en temps réel.
+    \item Travail directement dans Unity sans avoir à coder.
   \end{itemize}
 }{
   \twocolsfigure<1>{UnityLogo.png}{OpenCvLogo.png}{Logos d'Unity et d'OpenCV}
   \figurecaption<2>{OvrvisionTracking_2.jpg}{RA dans notre visiocasque}
-  \figurecaption<3>{OvrvisionCalibration_3.jpg}{Étalonnage de notre camera}
-  \twocolsfigure<4->{TrackMarkersDemo_2.jpg}{TrackMarkersDemo_3.jpg}{RA par suivi de marqueur}
+  \twocolsfigure<3->{TrackMarkersDemo_2.jpg}{TrackMarkersDemo_3.jpg}{RA par suivi de marqueur}
 }

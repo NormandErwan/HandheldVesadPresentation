@@ -5,23 +5,24 @@
     \item Tâche fondamentale : navigation et sélection.
     \item Réplication d'une tâche de classement.
     \item Grille 5x3. Classer 5 disques (en rouge) dans une cellule avec la même lettre.
-    \item Techniques d'interactions :
+    \item<+(1)-> Techniques d'interactions :
     \begin{itemize}
-      \item<.-> Gestes sur l'écran tactile.
-      \item Gestes dans l'écran virtuel.
+      \item<+(1)-> Gestes sur l'écran tactile.
+      \item<+(1)-> Gestes dans l'écran virtuel.
     \end{itemize}
   \end{itemize}
 }{
   \figurecaption<2>{Liu2014.jpg}{Tâche expérimentale de \cite{Liu2014}}
   \figurecaption<3>{HandheldVESADMidAirInArOut.jpg}{Notre tâche expérimentale}
-  \only<4>{
+  \figurecaption<4>{TaskGrid}{Grille de notre tâche expérimentale}
+  \only<6>{
     \begin{figure}
       \twocols{\figuregraphic[0.7]{Wobbrock2009_1.jpg}}{\figuregraphic{Wobbrock2009_2.jpg}}
       \figuregraphic[0.6]{Wobbrock2009_3.jpg}
       \caption{Gestes de sélection, de déplacement et d'agrandissement \cite{Wobbrock2009}}
     \end{figure}
   }
-  \twocolsfigure<5>{Piumsomboon2013_2.jpg}{Piumsomboon2013_3.jpg}{Gestes de sélection et de déplacement \cite{Piumsomboon2013}}
+  \twocolsfigure<7>{Piumsomboon2013_2.jpg}{Piumsomboon2013_3.jpg}{Gestes de sélection et de déplacement \cite{Piumsomboon2013}}
 }
 
 \twocolsframe{Plan expérimental}{
@@ -35,7 +36,7 @@
         \item VESAD
       \end{enumerate}
       \item Taille du texte : grand, petit.
-      \item Difficulté (distance moyenne disque-cellule) : facile, difficile.
+      \item Distance moyenne disque-cellule : facile, difficile.
     \end{itemize}
     \item<+-> Facteur emboîté : ordre de passage IHM, 3 groupes, en carré latin.
   \end{itemize}
@@ -43,7 +44,7 @@
   \externalmovie<2>{ExperimentPhoneOnly.jpg}{(1) Téléphone}{ExperimentPhoneOnly.mp4}
   \externalmovie<3>{ExperimentPhoneInArOut.jpg}{(2) VESAD tactile}{ExperimentPhoneInArOut.mp4}
   \externalmovie<4>{ExperimentMidAirInArOut.jpg}{(3) VESAD}{ExperimentMidAirInArOut.mp4}
-  \figurecaption<5-6>{TaskGrid}{Grille de la tâche}
+  \figurecaption<5-6>{TaskGrid.png}{Grille de notre tâche expérimentale}
   \only<7>{
     \begin{table}
       \scriptsize
@@ -65,13 +66,13 @@
     \item Barres d'erreurs : intervalles de confiances à 95\%.
     \item Temps de complétion
     \begin{itemize}
-      \item Effet de l'IHM :
+      \item Effet de l'IHM ($p = \num{2e-19}$) :
       \begin{enumerate}
         \item<.-> VESAD tactile
-        \item<.-> Téléphone (+22s)
-        \item<.-> VESAD (+49s)
+        \item<.-> Téléphone (+\SI{22}{\s}, $p = \num{9e-5}$)
+        \item<.-> VESAD (+\SI{49}{\s}, $p = \num{3e-5}$)
       \end{enumerate}
-      \item Effet du groupe : car apprentissage.
+      \item Effet du groupe ($p = \num{5e-5}$) : car apprentissage.
     \end{itemize}
   \end{itemize}
 }{
@@ -82,12 +83,12 @@
 
 \twocolsframe{Résultats}{
   \begin{itemize}[<+->]
-    \item Erreurs (disque mal classé) : pas de différences.
+    \item Erreurs (disque mal classé) : pas de différences importantes.
     \item Sélections :
     \begin{itemize}
       \item Correlé aux erreurs.
-      \item Effet de l'IHM : un peu plus sur Téléphone.
-      \item Effet du groupe : car apprentissage.
+      \item Effet de l'IHM ($p = \num{0.004}$) : un peu plus sur Téléphone mais pas entre VESAD et VESAD tactile.
+      \item Effet du groupe ($p = \num{0.01}$) : car apprentissage.
     \end{itemize}
   \end{itemize}
 }{
@@ -117,7 +118,7 @@
 
 \twocolsframe{Résultats}{
   \begin{itemize}[<+->]
-    \item Notes des participants :
+    \item Notes des participants des IHM, de 1 (le pire) à 5 (le meilleur) :
     \begin{itemize}
       \item Facile à comprendre.
       \item Mentalement facile à utiliser.
@@ -125,15 +126,15 @@
       \item Rapidité perçue.
       \item Performance perçue.
       \item Frustration.
-      \item Préférences.
+      \item Préférences : classement des trois IHM (1 la préférée).
     \end{itemize}
   \end{itemize}
 }{
-  \figurecaption<3>{easy_understand.png}{Facile à comprendre.}
-  \figurecaption<4>{mentally_easy.png}{Mentalement facile à utiliser.}
-  \figurecaption<5>{physically_easy.png}{Physiquement facile à utiliser.}
-  \figurecaption<6>{speed.png}{Rapidité perçue.}
-  \figurecaption<7>{performance.png}{Performance perçue.}
-  \figurecaption<8>{frustration.png}{Frustration.}
-  \figurecaption<9>{preferences.png}{Préférences.}
+  \figurecaption<2>{easy_understand.png}{Facile à comprendre.}
+  \figurecaption<3>{mentally_easy.png}{Mentalement facile à utiliser.}
+  \figurecaption<4>{physically_easy.png}{Physiquement facile à utiliser.}
+  \figurecaption<5>{speed.png}{Rapidité perçue.}
+  \figurecaption<6>{performance.png}{Performance perçue.}
+  \figurecaption<7>{frustration.png}{Frustration.}
+  \figurecaption<8>{preferences.png}{Préférences.}
 }
