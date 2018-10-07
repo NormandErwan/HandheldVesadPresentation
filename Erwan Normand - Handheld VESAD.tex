@@ -1,0 +1,100 @@
+% !TEX root
+% !TEX program = latexmk
+
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{lmodern}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{multimedia} % \movie command
+\usepackage[binary-units=true, locale=FR]{siunitx} % \SI and \num commands
+
+% Beamer configuration
+
+\setbeamertemplate{caption}{\raggedright\insertcaption\par} % Remove Figure or Table prefix in \caption:  https://tex.stackexchange.com/a/82460
+
+\mode<presentation> {
+  \usetheme{default}
+  \useinnertheme{circles}
+  \useoutertheme[subsections=false]{smoothbars}
+  \usecolortheme[rgb={0.8,0,0}]{structure}
+}
+
+\AtBeginSection[] {
+  \begin{frame}<beamer>{Plan de la soutenance}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+% Custom commands
+
+\newcommand{\twocols}[2]{% Two side-by-side colums
+  \begin{columns}%
+    \begin{column}{0.5\textwidth}#1\end{column}%
+    \begin{column}{0.5\textwidth}#2\end{column}%
+  \end{columns}%
+}
+\newcommand{\twocolsframe}[3]{%
+  \begin{frame}{#1}%
+    \twocols{#2}{#3}%
+  \end{frame}%
+}
+\newcommand{\figuregraphic}[2][1]{%
+  \includegraphics[width=#1\textwidth, height=5cm, keepaspectratio]{figures/#2}%
+}
+\newcommand<>{\figurecaption}[3][1]{%
+  \only#4{%
+    \vspace{-.5cm}
+    \begin{figure}%
+      \figuregraphic[#1]{#2}
+      \caption{#3}%
+    \end{figure}%
+  }%
+}
+\newcommand<>{\twocolsfigure}[4][1]{%
+  \only#5{%
+    \vspace{-.5cm}% Hack: visually better vertical centering
+    \begin{figure}%
+      \twocols{\figuregraphic[#1]{#2}}{\figuregraphic[#1]{#3}}
+      \caption{#4}%
+    \end{figure}%
+  }%
+}
+\newcommand<>{\externalmovie}[4][1]{%
+  \only#5{%
+    \begin{center}%
+      \movie[externalviewer]{\figuregraphic[#1]{#2}}{figures/#4}\\%
+      #3%
+    \end{center}%
+  }%
+}
+
+% Title configuration
+
+\title{Agrandissement d'un écran mobile par réalité augmentée}
+\author{Erwan Normand}
+\institute{Soutenance de mémoire de maîtrise}
+\date{\frenchdate{2018}{08}{29}}
+
+% Document
+
+\begin{document}
+
+\frame{\maketitle}
+
+\begin{frame}{Plan de la soutenance}
+  \tableofcontents
+\end{frame}
+
+\input{1_problematique}
+\input{2_prototype}
+\input{3_experience}
+\input{4_discussion}
+\input{5_conclusion}
+
+\appendix
+\section<presentation>*{\appendixname}
+\input{6_bibliographie}
+
+\end{document}
