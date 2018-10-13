@@ -4,11 +4,11 @@
 \documentclass[aspectratio=169]{beamer}
 
 \usepackage{lmodern}
-\usepackage[french]{babel}
+\usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{multimedia} % \movie command
-\usepackage[binary-units=true, locale=FR]{siunitx} % \SI and \num commands
+\usepackage[binary-units=true, locale=US]{siunitx} % \SI and \num commands
 
 % Beamer configuration
 
@@ -22,8 +22,8 @@
 }
 
 \AtBeginSection[] {
-  \begin{frame}<beamer>{Plan de la soutenance}
-    \tableofcontents[currentsection]
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection, currentsubsection]
   \end{frame}
 }
 
@@ -72,29 +72,27 @@
 
 % Title configuration
 
-\title{Agrandissement d'un écran mobile par réalité augmentée}
-\author{Erwan Normand}
-\institute{Soutenance de mémoire de maîtrise}
-\date{\frenchdate{2018}{08}{29}}
+\title[Handheld VESAD]{Enlarging a Smartphone with AR to Create a Handheld VESAD (Virtually Extended Screen-Aligned Display)}
+\author{Erwan Normand \and Michael J. McGuffin}
+\institute[ÉTS]{
+  Department of Software and IT Engineering\\
+  École de technologie supérieure (ÉTS)\\
+  Montréal (QC), Canada
+}
+\date{ISMAR 2018}
 
 % Document
 
 \begin{document}
 
-\frame{\maketitle}
+\frame{\titlepage}
 
-\begin{frame}{Plan de la soutenance}
-  \tableofcontents
-\end{frame}
-
-\input{1_problematique}
-\input{2_prototype}
-\input{3_experience}
-\input{4_discussion}
-\input{5_conclusion}
+\input{1_motivation.tex}
+\input{2_contribution.tex}
+\input{3_summary.tex}
 
 \appendix
 \section<presentation>*{\appendixname}
-\input{6_bibliographie}
+\input{4_bibliographie}
 
 \end{document}
