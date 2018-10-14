@@ -17,14 +17,8 @@
 \mode<presentation> {
   \usetheme{default}
   \useinnertheme{circles}
-  \useoutertheme[subsections=false]{smoothbars}
+  \useoutertheme[subsection=false]{smoothbars}
   \usecolortheme[rgb={0.8,0,0}]{structure}
-}
-
-\AtBeginSection[] {
-  \begin{frame}<beamer>{Outline}
-    \tableofcontents[currentsection, currentsubsection]
-  \end{frame}
 }
 
 % Custom commands
@@ -75,24 +69,32 @@
 \title[Handheld VESAD]{Enlarging a Smartphone with AR to Create a Handheld VESAD (Virtually Extended Screen-Aligned Display)}
 \author{Erwan Normand \and Michael J. McGuffin}
 \institute[ÉTS]{
-  Department of Software and IT Engineering\\
   École de technologie supérieure (ÉTS)\\
   Montréal (QC), Canada
 }
 \date{ISMAR 2018}
+\titlegraphic{
+  \includegraphics[height=1.5cm]{figures/ETS.jpg}%
+  \hspace*{8cm}%
+  \includegraphics[height=1.5cm]{figures/CRSNG.jpg}%
+}
 
 % Document
 
 \begin{document}
 
-\frame{\titlepage}
+\begin{frame}
+  \titlepage
+\end{frame}
 
 \input{1_motivation.tex}
-\input{2_contribution.tex}
-\input{3_summary.tex}
+\input{2_background.tex}
+\input{3_concept.tex}
+\input{4_experiment.tex}
+\input{5_summary.tex}
 
 \appendix
 \section<presentation>*{\appendixname}
-\input{4_bibliographie}
+\input{6_bibliographie}
 
 \end{document}
