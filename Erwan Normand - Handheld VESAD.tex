@@ -7,8 +7,8 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{multimedia} % \movie command
-\usepackage[binary-units=true, locale=US]{siunitx} % \SI and \num commands
+\usepackage{media9}
+\usepackage[binary-units=true, locale=UK]{siunitx} % \SI and \num commands
 
 % Beamer configuration
 
@@ -35,7 +35,7 @@
   \end{frame}%
 }
 \newcommand{\figuregraphic}[2][1]{%
-  \includegraphics[width=#1\textwidth, height=5cm, keepaspectratio]{figures/#2}%
+  \includegraphics[width=#1\textwidth, height=6cm, keepaspectratio]{figures/#2}%
 }
 \newcommand<>{\figurecaption}[3][1]{%
   \only#4{%
@@ -48,18 +48,18 @@
 }
 \newcommand<>{\twocolsfigure}[4][1]{%
   \only#5{%
-    \vspace{-.5cm}% Hack: visually better vertical centering
     \begin{figure}%
       \twocols{\figuregraphic[#1]{#2}}{\figuregraphic[#1]{#3}}
       \caption{#4}%
     \end{figure}%
   }%
 }
-\newcommand<>{\externalmovie}[4][1]{%
+\newcommand<>{\movie}[4][1]{%
   \only#5{%
     \begin{center}%
-      \movie[externalviewer]{\figuregraphic[#1]{#2}}{figures/#4}\\%
-      #3%
+    \includemedia[width=#1\textwidth, totalheight=6cm, keepaspectratio, activate=pageopen]%
+      {\figuregraphic[#1]{#2}}{figures/#3}\\%
+      #4%
     \end{center}%
   }%
 }
@@ -87,14 +87,15 @@
   \titlepage
 \end{frame}
 
-\input{1_motivation.tex}
-\input{2_background.tex}
-\input{3_concept.tex}
-\input{4_experiment.tex}
-\input{5_summary.tex}
+\input{1_motivation}
+\input{2_background}
+\input{3_concept}
+\input{4_experiment}
+\input{5_results}
+\input{6_summary}
 
 \appendix
 \section<presentation>*{\appendixname}
-\input{6_bibliographie}
+\input{7_bibliographie}
 
 \end{document}
