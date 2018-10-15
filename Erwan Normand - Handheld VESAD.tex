@@ -57,8 +57,16 @@
 \newcommand<>{\movie}[4][1]{%
   \only#5{%
     \begin{center}%
-    \includemedia[width=#1\textwidth, totalheight=6cm, keepaspectratio, activate=pageopen]%
-      {\figuregraphic[#1]{#2}}{figures/#3}\\%
+    \includemedia[%
+      width=#1\textwidth, totalheight=6cm, keepaspectratio,%
+      addresource=figures/#3, activate=pageopen,%
+      flashvars={%
+        source=figures/#3%
+        &autoPlay=true%
+        &loop=true%
+      }]%
+      {\figuregraphic[#1]{#2}}%
+      {VPlayer.swf}\\%
       #4%
     \end{center}%
   }%
@@ -87,15 +95,15 @@
   \titlepage
 \end{frame}
 
-\input{1_motivation}
-\input{2_background}
-\input{3_concept}
-\input{4_experiment}
-\input{5_results}
-\input{6_summary}
+%\input{1_motivation.tex}
+%\input{2_previous_works.tex}
+%\input{3_concept.tex}
+\input{4_experiment.tex}
+%\input{5_results.tex}
+%\input{6_summary.tex}
 
 \appendix
 \section<presentation>*{\appendixname}
-\input{7_bibliographie}
+\input{7_references}
 
 \end{document}
