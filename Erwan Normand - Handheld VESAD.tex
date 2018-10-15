@@ -46,28 +46,35 @@
     \end{figure}%
   }%
 }
-\newcommand<>{\twocolsfigure}[4][1]{%
-  \only#5{%
+\newcommand<>{\twocolsfigure}[5]{%
+  \only#6{%
     \begin{figure}%
-      \twocols{\figuregraphic[#1]{#2}}{\figuregraphic[#1]{#3}}
-      \caption{#4}%
+      \twocols{%
+        \centering%
+        \figuregraphic[#1]{#2}%
+      }{%
+        \centering%
+        \figuregraphic[#3]{#4}%
+      }%
+      \caption{#5}%
     \end{figure}%
   }%
 }
 \newcommand<>{\movie}[4][1]{%
   \only#5{%
+    \vspace{-.5cm}%
     \begin{center}%
-    \includemedia[%
-      width=#1\textwidth, totalheight=6cm, keepaspectratio,%
-      addresource=figures/#3, activate=pageopen,%
-      flashvars={%
-        source=figures/#3%
-        &autoPlay=true%
-        &loop=true%
-      }]%
-      {\figuregraphic[#1]{#2}}%
-      {VPlayer.swf}\\%
-      #4%
+      \includemedia[%
+        width=#1\textwidth, totalheight=6.5cm, keepaspectratio,%
+        addresource=figures/#3, activate=pageopen,%
+        flashvars={%
+          source=figures/#3%
+          &autoPlay=true%
+          &loop=true%
+        }]%
+        {\figuregraphic[#1]{#2}}%
+        {VPlayer.swf}\\%
+        #4%
     \end{center}%
   }%
 }
@@ -95,15 +102,16 @@
   \titlepage
 \end{frame}
 
-%\input{1_motivation.tex}
+\input{1_motivation.tex}
 %\input{2_previous_works.tex}
 %\input{3_concept.tex}
-\input{4_experiment.tex}
-%\input{5_results.tex}
-%\input{6_summary.tex}
+%\input{4_implementation.tex}
+%\input{5_experiment.tex}
+%\input{6_results.tex}
+%\input{7_summary.tex}
 
 \appendix
 \section<presentation>*{\appendixname}
-\input{7_references}
+\input{8_references}
 
 \end{document}
