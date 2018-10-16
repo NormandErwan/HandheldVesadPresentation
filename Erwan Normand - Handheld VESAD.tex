@@ -10,6 +10,8 @@
 \usepackage{media9}
 \usepackage[binary-units=true, locale=UK]{siunitx} % \SI and \num commands
 
+\input{_commands.tex}
+
 % Beamer configuration
 
 \setbeamertemplate{caption}{\raggedright\insertcaption\par} % Remove Figure or Table prefix in \caption:  https://tex.stackexchange.com/a/82460
@@ -19,64 +21,6 @@
   \useinnertheme{circles}
   \useoutertheme[subsection=false]{smoothbars}
   \usecolortheme[rgb={0.8,0,0}]{structure}
-}
-
-% Custom commands
-
-\newcommand{\twocols}[2]{% Two side-by-side colums
-  \begin{columns}%
-    \begin{column}{0.5\textwidth}#1\end{column}%
-    \begin{column}{0.5\textwidth}#2\end{column}%
-  \end{columns}%
-}
-\newcommand{\twocolsframe}[3]{%
-  \begin{frame}{#1}%
-    \twocols{#2}{#3}%
-  \end{frame}%
-}
-\newcommand{\figuregraphic}[2][1]{%
-  \includegraphics[width=#1\textwidth, height=6cm, keepaspectratio]{figures/#2}%
-}
-\newcommand<>{\figurecaption}[3][1]{%
-  \only#4{%
-    \vspace{-.5cm}
-    \begin{figure}%
-      \figuregraphic[#1]{#2}
-      \caption{#3}%
-    \end{figure}%
-  }%
-}
-\newcommand<>{\twocolsfigure}[5]{%
-  \only#6{%
-    \begin{figure}%
-      \twocols{%
-        \centering%
-        \figuregraphic[#1]{#2}%
-      }{%
-        \centering%
-        \figuregraphic[#3]{#4}%
-      }%
-      \caption{#5}%
-    \end{figure}%
-  }%
-}
-\newcommand<>{\movie}[4][1]{%
-  \only#5{%
-    \vspace{-.5cm}%
-    \begin{center}%
-      \includemedia[%
-        width=#1\textwidth, totalheight=6.5cm, keepaspectratio,%
-        addresource=figures/#3, activate=pageopen,%
-        flashvars={%
-          source=figures/#3%
-          &autoPlay=true%
-          &loop=true%
-        }]%
-        {\figuregraphic[#1]{#2}}%
-        {VPlayer.swf}\\%
-        #4%
-    \end{center}%
-  }%
 }
 
 % Title configuration
@@ -103,9 +47,9 @@
 \end{frame}
 
 \input{1_motivation.tex}
-%\input{2_previous_works.tex}
+\input{2_related_works.tex}
 %\input{3_concept.tex}
-%\input{4_implementation.tex}
+\input{4_implementation.tex}
 %\input{5_experiment.tex}
 %\input{6_results.tex}
 %\input{7_summary.tex}
