@@ -1,62 +1,37 @@
 \section{Experiment}
 
-\twocolsframe{Experiment Task}{
-  \begin{itemize}[<+->]
-    \item Tâche fondamentale : navigation et sélection.
-    \item Réplication d'une tâche de classement.
-    \item Grille 5x3. Classer 5 disques (en rouge) dans une cellule avec la même lettre.
-    \item<+(1)-> Techniques d'interactions :
-    \begin{itemize}
-      \item<+(1)-> Gestes sur l'écran tactile.
-      \item<+(1)-> Gestes dans l'écran virtuel.
-    \end{itemize}
-  \end{itemize}
-}{
-  \figurecaption<2>{Liu2014.jpg}{Tâche expérimentale de \cite{Liu2014}}
-  \figurecaption<3>{HandheldVESADMidAirInArOut.jpg}{Notre tâche expérimentale}
-  \figurecaption<4>{TaskGrid}{Grille de notre tâche expérimentale}
-  \only<6>{
-    \begin{figure}
-      \twocols{\figuregraphic[0.7]{Wobbrock2009_1.jpg}}{\figuregraphic{Wobbrock2009_2.jpg}}
-      \figuregraphic[0.6]{Wobbrock2009_3.jpg}
-      \caption{Gestes de sélection, de déplacement et d'agrandissement \cite{Wobbrock2009}}
-    \end{figure}
-  }
-  \twocolsfigure<7>{Piumsomboon2013_2.jpg}{Piumsomboon2013_3.jpg}{Gestes de sélection et de déplacement \cite{Piumsomboon2013}}
-}
+\begin{frame}{Experimental Task}
+  \movie{Liu2014.jpg}{Liu2014.mp4}{Liu \textit{et al.} Effects of display size and navigation type on a classification task. CHI 2014. https://youtu.be/SBXwW5lz-4o}
+\end{frame}
+
+\begin{frame}{Experimental Task}
+  \figurecaption{HandheldVESADMidAirInArOut.jpg}{}
+\end{frame}
 
 \twocolsframe{Experiment Design}{
   \begin{itemize}[<+->]
-    \item Facteurs croisés :
+    \item Main factor: Technique
     \begin{itemize}
-      \item<.-> IHM :
-      \begin{enumerate}
-        \item Téléphone
-        \item VESAD tactile
-        \item VESAD
-      \end{enumerate}
-      \item Taille du texte : grand, petit.
-      \item Distance moyenne disque-cellule : facile, difficile.
+      \item PhoneOnly
+      \item PhoneInArOut
+      \item MidAirInArOut
     \end{itemize}
-    \item<+-> Facteur emboîté : ordre de passage IHM, 3 groupes, en carré latin.
-    \item 12 participants (3 femmes, tous +18 ans, 2 de +25 ans).
+    \item TextSize
+    \begin{itemize}
+      \item Big
+      \item Small
+    \end{itemize}
+    \item Distance
+    \begin{itemize}
+      \item Near
+      \item Far
+    \end{itemize}
+    \item 12 participants (3 females, 18-26 years)
+    \item 288 trials
   \end{itemize}
 }{
-  \movie<1>{ExperimentPhoneOnly.jpg}{ExperimentPhoneOnly.mp4}{(1) Téléphone}
-  \movie<2>{ExperimentPhoneInArOut.jpg}{ExperimentPhoneInArOut.mp4}{(2) VESAD tactile}
-  \movie<3>{ExperimentMidAirInArOut.jpg}{ExperimentMidAirInArOut.mp4}{(3) VESAD}
-  \figurecaption<5-6>{TaskGrid.png}{Grille de notre tâche expérimentale}
-  \only<7>{
-    \begin{table}
-      \scriptsize
-      \begin{tabular}{| c | c | c | c |}
-        \hline \textbf{Groupe} & \textbf{IHM 1} & \textbf{IHM 2} & \textbf{IHM 3}\\
-        \hline 1 & Téléphone & VESAD tac. & VESAD \\
-        \hline 2 & VESAD tac. & VESAD & Téléphone \\
-        \hline 3 & VESAD & Téléphone & VESAD tac. \\
-        \hline 
-      \end{tabular}
-      \caption{Ordre de passage.}
-    \end{table}
-  }
+  \movie<2>{ExperimentPhoneOnly.jpg}{ExperimentPhoneOnly.mp4}{}
+  \movie<3>{ExperimentPhoneInArOut.jpg}{ExperimentPhoneInArOut.mp4}{}
+  \movie<4>{ExperimentMidAirInArOut.jpg}{ExperimentMidAirInArOut.mp4}{}
+  \figurecaption<5->{HandheldVESADMidAirInArOut.jpg}{}
 }

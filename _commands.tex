@@ -1,7 +1,7 @@
-\newcommand{\twocols}[2]{% Two side-by-side colums
+\newcommand{\twocols}[4]{% Two side-by-side colums
   \begin{columns}%
-    \begin{column}{0.5\textwidth}#1\end{column}%
-    \begin{column}{0.5\textwidth}#2\end{column}%
+    \begin{column}{#1\textwidth}#2\end{column}%
+    \begin{column}{#3\textwidth}#4\end{column}%
   \end{columns}%
 }
 \newcommand{\threecols}[3]{%
@@ -14,7 +14,7 @@
 
 \newcommand{\twocolsframe}[3]{%
   \begin{frame}{#1}%
-    \twocols{#2}{#3}%
+    \twocols{0.5}{#2}{0.5}{#3}%
   \end{frame}%
 }
 
@@ -28,7 +28,7 @@
 }
 \newcommand<>{\twocolsmedia}[3]{%
   \only#4{%
-    \twocols{#1}{#2}%
+    \twocols{0.5}{#1}{0.5}{#2}%
     \begin{center}%
       #3%
     \end{center}%
@@ -46,11 +46,11 @@
     \end{figure}%
   }%
 }
-\newcommand<>{\twocolsfigure}[7]{%
-  \twocolsmedia#8
-    {\figurecaption[#1]{#2}{#3}}%
-    {\figurecaption[#4]{#5}{#6}}%
-    {#7}%
+\newcommand<>{\twocolsfigure}[5]{%
+  \twocolsmedia#6
+    {\figurecaption{#1}{#2}}%
+    {\figurecaption{#3}{#4}}%
+    {#5}%
 }
 
 \newcommand<>{\movie}[4][1]{%
