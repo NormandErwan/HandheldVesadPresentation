@@ -1,15 +1,19 @@
-\newcommand{\twocols}[4]{% Two side-by-side colums
-  \begin{columns}%
-    \begin{column}{#1\textwidth}#2\end{column}%
-    \begin{column}{#3\textwidth}#4\end{column}%
-  \end{columns}%
+\newcommand<>{\twocols}[4]{% Two side-by-side colums
+  \only#5{%
+    \begin{columns}%
+      \begin{column}{#1\textwidth}#2\end{column}%
+      \begin{column}{#3\textwidth}#4\end{column}%
+    \end{columns}%
+  }%
 }
-\newcommand{\threecols}[3]{%
-  \begin{columns}%
-    \begin{column}{0.33\textwidth}#1\end{column}%
-    \begin{column}{0.33\textwidth}#2\end{column}%
-    \begin{column}{0.33\textwidth}#3\end{column}%
-  \end{columns}%
+\newcommand<>{\threecols}[3]{%
+  \only#4{%
+    \begin{columns}%
+      \begin{column}{0.33\textwidth}#1\end{column}%
+      \begin{column}{0.33\textwidth}#2\end{column}%
+      \begin{column}{0.33\textwidth}#3\end{column}%
+    \end{columns}%
+  }%
 }
 
 \newcommand{\framefootnote}[1]{%
