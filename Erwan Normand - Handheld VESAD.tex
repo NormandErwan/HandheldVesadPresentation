@@ -1,0 +1,58 @@
+% !TEX root
+% !TEX program = latexmk
+
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{media9}
+\usepackage[binary-units=true, locale=UK]{siunitx} % \SI and \num commands
+
+\input{_commands.tex}
+
+% Beamer configuration
+
+\setbeamertemplate{caption}{\raggedright\insertcaption\par} % Remove Figure or Table prefix in \caption:  https://tex.stackexchange.com/a/82460
+
+\mode<presentation> {
+  \usetheme{default}
+  \useinnertheme{circles}
+  \useoutertheme[subsection=false]{smoothbars}
+  \usecolortheme[rgb={0.8,0,0}]{structure}
+}
+
+% Title configuration
+
+\title{Enlarging a Smartphone with AR to Create a Handheld VESAD (Virtually Extended Screen-Aligned Display)}
+\author{Erwan Normand \and Michael J. McGuffin}
+\institute[ÉTS]{
+  École de technologie supérieure (ÉTS)\\
+  Montréal (QC), Canada
+}
+\date{ISMAR 2018}
+\titlegraphic{\includegraphics[height=1.5cm]{figures/ETS.jpg}}
+
+% Document
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\input{1_motivation.tex}
+\input{2_related_works.tex}
+\input{3_concept.tex}
+\input{4_implementation.tex}
+\input{5_experiment.tex}
+\input{6_results.tex}
+\input{7_summary.tex}
+
+\appendix
+\section<presentation>*{\appendixname}
+\input{8_references}
+\input{9_support}
+
+\end{document}

@@ -1,0 +1,86 @@
+\newcommand<>{\twocols}[4]{% Two side-by-side colums
+  \only#5{%
+    \begin{columns}%
+      \begin{column}{#1\textwidth}#2\end{column}%
+      \begin{column}{#3\textwidth}#4\end{column}%
+    \end{columns}%
+  }%
+}
+\newcommand<>{\threecols}[3]{%
+  \only#4{%
+    \begin{columns}%
+      \begin{column}{0.33\textwidth}#1\end{column}%
+      \begin{column}{0.33\textwidth}#2\end{column}%
+      \begin{column}{0.33\textwidth}#3\end{column}%
+    \end{columns}%
+  }%
+}
+
+\newcommand{\framefootnote}[1]{%
+  \begin{flushright}
+    \scriptsize #1
+  \end{flushright}
+}
+
+\newcommand{\twocolsframe}[3]{%
+  \begin{frame}{#1}%
+    \twocols{0.5}{#2}{0.5}{#3}%
+  \end{frame}%
+}
+
+\newcommand<>{\media}[1]{%
+  \only#2{%
+    \vspace{-.5cm}%
+    \begin{center}%
+      #1%
+    \end{center}%
+  }%
+}
+\newcommand<>{\twocolsmedia}[3]{%
+  \only#4{%
+    \twocols{0.5}{#1}{0.5}{#2}%
+    \begin{center}%
+      #3%
+    \end{center}%
+  }%
+}
+
+\newcommand{\figuregraphic}[2][1]{%
+  \includegraphics[width=#1\textwidth, height=6.5cm, keepaspectratio]{figures/#2}%
+}
+\newcommand<>{\figurecaption}[3][1]{%
+  \media#4{%
+    \begin{figure}%
+      \figuregraphic[#1]{#2}\\%
+      #3%
+    \end{figure}%
+  }%
+}
+\newcommand<>{\twocolsfigure}[5]{%
+  \twocolsmedia#6
+    {\figurecaption{#1}{#2}}%
+    {\figurecaption{#3}{#4}}%
+    {#5}%
+}
+
+\newcommand<>{\movie}[4][1]{%
+  \media#5{%
+    \includemedia[%
+      width=#1\textwidth, totalheight=6.5cm, keepaspectratio,%
+      addresource=figures/#3, activate=pageopen,%
+      flashvars={%
+        source=figures/#3%
+        &autoPlay=true%
+        &loop=true%
+      }]%
+      {\figuregraphic[#1]{#2}}%
+      {VPlayer.swf}\\%
+      #4%
+  }%
+}
+\newcommand<>{\twocolsmovie}[7]{%
+  \twocolsmedia#8%
+    {\movie{#1}{#2}{#3}}%
+    {\movie{#4}{#5}{#6}}%
+    {#7}%
+}
